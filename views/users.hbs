@@ -1,0 +1,21 @@
+<head>
+    <style>
+        #boardText{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<h1 class="boardText" id="boardText">Sample Text</h1>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+
+        socket.on("boardContent", function(msg){
+            document.getElementById("boardText").innerHTML = msg;
+        })
+        
+    
+    </script>
+
